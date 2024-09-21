@@ -1,0 +1,26 @@
+## 폴더 무시
+.vs/
+.settings/
+Debug/
+@Trash/
+tmp/
+Temp/
+temp/
+Release/
+x64/
+x86/
+build/
+Log/
+## 파일 무시 (test.txt) 
+
+## 다음과 같은 확장자는 전체 무시  
+*.exe
+*.zip
+*.tmp
+*.bin
+*.obj
+*.ilk
+*.pdb
+
+
+
