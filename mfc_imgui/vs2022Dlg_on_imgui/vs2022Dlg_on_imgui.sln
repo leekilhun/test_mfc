@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "on_imgui", "on_imgui\on_imgui.vcxproj", "{C0EC058A-59D3-2A7D-D3DA-769C5E0E62CC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tools", "Tools\Tools.vcxitems", "{9858660E-F5B4-40CE-BE71-00CA9F698590}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0EC058A-59D3-2A7D-D3DA-769C5E0E62CC}.Debug|x64.ActiveCfg = Debug|x64
+		{C0EC058A-59D3-2A7D-D3DA-769C5E0E62CC}.Debug|x64.Build.0 = Debug|x64
+		{C0EC058A-59D3-2A7D-D3DA-769C5E0E62CC}.Debug|x86.ActiveCfg = Debug|Win32
+		{C0EC058A-59D3-2A7D-D3DA-769C5E0E62CC}.Debug|x86.Build.0 = Debug|Win32
+		{C0EC058A-59D3-2A7D-D3DA-769C5E0E62CC}.Release|x64.ActiveCfg = Release|x64
+		{C0EC058A-59D3-2A7D-D3DA-769C5E0E62CC}.Release|x64.Build.0 = Release|x64
+		{C0EC058A-59D3-2A7D-D3DA-769C5E0E62CC}.Release|x86.ActiveCfg = Release|Win32
+		{C0EC058A-59D3-2A7D-D3DA-769C5E0E62CC}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5753407F-5421-4B2D-BBFB-4943538EA9E4}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Tools\Tools.vcxitems*{9858660e-f5b4-40ce-be71-00ca9f698590}*SharedItemsImports = 9
+		Tools\Tools.vcxitems*{c0ec058a-59d3-2a7d-d3da-769c5e0e62cc}*SharedItemsImports = 4
+	EndGlobalSection
+EndGlobal

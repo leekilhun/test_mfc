@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{5a11e529-2ae3-415c-848a-d5350bef2a21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui\backends">
+      <UniqueIdentifier>{ea88c432-fdb1-4ea0-88f3-6a6d24bedbb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="implot">
+      <UniqueIdentifier>{77dbeacf-9d2b-49b6-a650-0fd379446a98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imnodes">
+      <UniqueIdentifier>{c1476307-b677-42ee-97a4-e8596494da5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imguizmo">
+      <UniqueIdentifier>{8dbd6818-1ed9-4365-a0ca-423b02804cc3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\backends\imgui_impl_dx11.h">
+      <Filter>imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\backends\imgui_impl_win32.h">
+      <Filter>imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)implot\implot.h">
+      <Filter>implot</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)implot\implot_internal.h">
+      <Filter>implot</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imnodes\imnodes.h">
+      <Filter>imnodes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imnodes\imnodes_internal.h">
+      <Filter>imnodes</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imguizmo\ImGuizmo.h">
+      <Filter>imguizmo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\backends\imgui_impl_dx11.cpp">
+      <Filter>imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\backends\imgui_impl_win32.cpp">
+      <Filter>imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)implot\implot.cpp">
+      <Filter>implot</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)implot\implot_demo.cpp">
+      <Filter>implot</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)implot\implot_items.cpp">
+      <Filter>implot</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imnodes\imnodes.cpp">
+      <Filter>imnodes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imguizmo\ImGuizmo.cpp">
+      <Filter>imguizmo</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

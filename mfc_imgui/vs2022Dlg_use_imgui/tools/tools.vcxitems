@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{288e4a12-9040-4a92-b7fc-7edb9f4ab989}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imconfig.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imgui.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imgui_internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imstb_rectpack.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imstb_textedit.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)imgui\imstb_truetype.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui_demo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui_draw.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui_tables.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)imgui\imgui_widgets.cpp" />
+  </ItemGroup>
+</Project>
