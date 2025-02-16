@@ -2,9 +2,9 @@
 //
 
 #include "pch.h"
-#include "use_imgui.h"
+#include "use_implot.h"
 #include "afxdialogex.h"
-#include "win_Imgui.h"
+#include "win_Implot.h"
 
 
 //-----------------------------------------------------------------------------
@@ -360,25 +360,25 @@ private:
 
 #define UPDATE_TIMER_POP_UNIT_IMGUI_DLG 2
 
-IMPLEMENT_DYNAMIC(Cwin_Imgui, CDialogEx)
+IMPLEMENT_DYNAMIC(Cwin_Implot, CDialogEx)
 
-Cwin_Imgui::Cwin_Imgui(CWnd* pParent /*=nullptr*/)
+Cwin_Implot::Cwin_Implot(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_IMGUI_WIND, pParent)
 {
 
 }
 
-Cwin_Imgui::~Cwin_Imgui()
+Cwin_Implot::~Cwin_Implot()
 {
 }
 
-void Cwin_Imgui::DoDataExchange(CDataExchange* pDX)
+void Cwin_Implot::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 }
 
 
-BEGIN_MESSAGE_MAP(Cwin_Imgui, CDialogEx)
+BEGIN_MESSAGE_MAP(Cwin_Implot, CDialogEx)
 	ON_WM_DESTROY()
 	ON_WM_SHOWWINDOW()
 	ON_WM_TIMER()
@@ -388,7 +388,7 @@ END_MESSAGE_MAP()
 // Cwin_Imgui 메시지 처리기
 
 
-void Cwin_Imgui::OnDestroy()
+void Cwin_Implot::OnDestroy()
 {
 	CDialogEx::OnDestroy();
 
@@ -399,7 +399,7 @@ void Cwin_Imgui::OnDestroy()
 }
 
 
-void Cwin_Imgui::OnShowWindow(BOOL bShow, UINT nStatus)
+void Cwin_Implot::OnShowWindow(BOOL bShow, UINT nStatus)
 {
 	CDialogEx::OnShowWindow(bShow, nStatus);
 
@@ -407,7 +407,7 @@ void Cwin_Imgui::OnShowWindow(BOOL bShow, UINT nStatus)
 }
 
 
-void Cwin_Imgui::OnTimer(UINT_PTR nIDEvent)
+void Cwin_Implot::OnTimer(UINT_PTR nIDEvent)
 {
 	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
 	RenderImGui();
@@ -416,7 +416,7 @@ void Cwin_Imgui::OnTimer(UINT_PTR nIDEvent)
 }
 
 
-BOOL Cwin_Imgui::OnInitDialog()
+BOOL Cwin_Implot::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
@@ -439,7 +439,7 @@ BOOL Cwin_Imgui::OnInitDialog()
 // Forward declare message handler from imgui_impl_win32.cpp
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
-BOOL Cwin_Imgui::PreTranslateMessage(MSG* pMsg)
+BOOL Cwin_Implot::PreTranslateMessage(MSG* pMsg)
 {
 	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
 	if (ImGui_ImplWin32_WndProcHandler(pMsg->hwnd, pMsg->message, pMsg->wParam, pMsg->lParam))
@@ -448,7 +448,7 @@ BOOL Cwin_Imgui::PreTranslateMessage(MSG* pMsg)
 	return CDialogEx::PreTranslateMessage(pMsg);
 }
 
-void Cwin_Imgui::InitImGui()
+void Cwin_Implot::InitImGui()
 {
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO();
@@ -459,9 +459,13 @@ void Cwin_Imgui::InitImGui()
 	ImGui_ImplWin32_Init(GetSafeHwnd());
 	ImGui_ImplDX11_Init(g_pd3dDevice, g_pd3dDeviceContext);
 
+
+	ImPlot::CreateContext(); // ✅ ImPlot 초기화
+	ImNodes::CreateContext(); // ✅ ImNodes 초기화
+
 }
 
-void Cwin_Imgui::RenderImGui()
+void Cwin_Implot::RenderImGui()
 {
 	using namespace DirectX;
 
@@ -470,9 +474,39 @@ void Cwin_Imgui::RenderImGui()
 	ImGui::NewFrame();
 
 
+	static bool show_popup = false;
+	
 
-#if 1
-	ImGui::ShowDemoWindow();
+#define ShoW_ImGui_exam
+#define ShoW_ImPlot_exam
+
+#ifdef ShoW_ImGui_exam
+	//ImGui::ShowDemoWindow();
+
+
+// UI 생성
+	if (ImGui::Begin("Main Window"))
+	{
+		if (ImGui::Button("Open Popup"))
+			ImGui::OpenPopup("MyPopup", ImGuiWindowFlags_AlwaysAutoResize);  // 반드시 호출
+
+		// 팝업 처리
+		// OpenPopup이 실행된 후 다음 프레임에서 BeginPopup 실행
+		if (ImGui::BeginPopup("MyPopup"))
+		{
+			ImGui::Text("Hello! This is a popup.");
+			if (ImGui::Button("Close"))
+			{
+				ImGui::CloseCurrentPopup();
+			}
+			ImGui::EndPopup();
+		}
+
+	}
+	ImGui::End();
+
+
+
 #else
 
 	// ✅ 예제 로그 창 추가
@@ -509,16 +543,61 @@ void Cwin_Imgui::RenderImGui()
 
 
 	//stack을 share 후 사용하는 듯
-	if (ImGui::BeginPopup("Log Monitor", ImGuiWindowFlags_AlwaysAutoResize))
-	{
-		ImGui::Text("Logging...");
-		if (ImGui::Button("Close")) {
-			ImGui::CloseCurrentPopup();
-		}
-		ImGui::EndPopup();
-	}
+	//if (ImGui::BeginPopup("Log Monitor", ImGuiWindowFlags_AlwaysAutoResize))
+	//{
+	//	ImGui::Text("Logging...");
+	//	if (ImGui::Button("Close")) {
+	//		ImGui::CloseCurrentPopup();
+	//	}
+	//	ImGui::EndPopup();
+	//}
 
 #endif
+
+#ifdef ShoW_ImPlot_exam
+	ImPlot::ShowDemoWindow();
+#else
+	// ✅ ImPlot 예제 그래프
+	if (ImGui::Begin("ImPlot Example"))
+	{
+		static float xs[100], ys[100];
+		for (int i = 0; i < 100; ++i)
+		{
+			xs[i] = i * 0.01f;
+			ys[i] = (float)sin(xs[i] * 10.0f); // sin 함수 그래프
+		}
+
+		if (ImPlot::BeginPlot("Sine Wave"))
+		{
+			ImPlot::PlotLine("sin(x)", xs, ys, 100);
+			ImPlot::EndPlot();
+		}
+		ImGui::End();
+	}
+#endif
+	// ✅ ImNodes 창 크기 설정
+	ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_FirstUseEver);
+	if (ImGui::Begin("Node Editor"))
+	{
+		ImNodes::BeginNodeEditor();
+
+		ImNodes::BeginNode(1);
+		ImNodes::BeginNodeTitleBar();
+		ImGui::Text("Node A");
+		ImNodes::EndNodeTitleBar();
+		ImNodes::BeginInputAttribute(2);
+		ImGui::Text("Input");
+		ImNodes::EndInputAttribute();
+		ImNodes::BeginOutputAttribute(3);
+		ImGui::Text("Output");
+		ImNodes::EndOutputAttribute();
+		ImNodes::EndNode();
+
+		ImNodes::EndNodeEditor();
+		ImGui::End();
+	}
+
+
 	// 렌더링
 	ImGui::Render();
 	g_pd3dDeviceContext->OMSetRenderTargets(1, &g_mainRenderTargetView, nullptr);
@@ -528,11 +607,179 @@ void Cwin_Imgui::RenderImGui()
 	g_pSwapChain->Present(1, 0);
 }
 
-void Cwin_Imgui::CleanupImGui()
+void Cwin_Implot::CleanupImGui()
 {
+	ImNodes::DestroyContext(); // ✅ ImNodes 정리
+	ImPlot::DestroyContext();  // ✅ ImPlot 정리
+
+
 	ImGui_ImplDX11_Shutdown();
 	ImGui_ImplWin32_Shutdown();
 	ImGui::DestroyContext();
 	CleanupDeviceD3D();
 }
+
+
+
+
+
+//-----------------------------------------------------------------------------
+// implot 예제
+//-----------------------------------------------------------------------------
+/*
+
+#include <windows.h>
+#include <d3d11.h>
+#include "imgui.h"
+#include "imgui_impl_win32.h"
+#include "imgui_impl_dx11.h"
+#include "implot.h"
+
+#pragma comment(lib, "d3d11.lib")
+
+// 전역 변수
+HWND hWnd = NULL;
+ID3D11Device* g_pd3dDevice = NULL;
+ID3D11DeviceContext* g_pd3dDeviceContext = NULL;
+IDXGISwapChain* g_pSwapChain = NULL;
+ID3D11RenderTargetView* g_mainRenderTargetView = NULL;
+
+LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
+void CreateRenderTarget()
+{
+		ID3D11Texture2D* pBackBuffer;
+		g_pSwapChain->GetBuffer(0, IID_PPV_ARGS(&pBackBuffer));
+		g_pd3dDevice->CreateRenderTargetView(pBackBuffer, NULL, &g_mainRenderTargetView);
+		pBackBuffer->Release();
+}
+
+void CleanupRenderTarget()
+{
+		if (g_mainRenderTargetView) { g_mainRenderTargetView->Release(); g_mainRenderTargetView = NULL; }
+}
+
+bool CreateDeviceD3D(HWND hWnd)
+{
+		DXGI_SWAP_CHAIN_DESC sd = {};
+		sd.BufferCount = 1;
+		sd.BufferDesc.Width = 0;
+		sd.BufferDesc.Height = 0;
+		sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+		sd.BufferDesc.RefreshRate.Numerator = 60;
+		sd.BufferDesc.RefreshRate.Denominator = 1;
+		sd.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
+		sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+		sd.OutputWindow = hWnd;
+		sd.SampleDesc.Count = 1;
+		sd.SampleDesc.Quality = 0;
+		sd.Windowed = TRUE;
+		sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
+
+		D3D_FEATURE_LEVEL featureLevel;
+		const D3D_FEATURE_LEVEL featureLevelArray[2] = { D3D_FEATURE_LEVEL_11_0, D3D_FEATURE_LEVEL_10_0 };
+		if (D3D11CreateDeviceAndSwapChain(NULL, D3D_DRIVER_TYPE_HARDWARE, NULL, 0, featureLevelArray, 2,
+																			D3D11_SDK_VERSION, &sd, &g_pSwapChain, &g_pd3dDevice, &featureLevel, &g_pd3dDeviceContext) != S_OK)
+				return false;
+
+		CreateRenderTarget();
+		return true;
+}
+
+void CleanupDeviceD3D()
+{
+		CleanupRenderTarget();
+		if (g_pSwapChain) { g_pSwapChain->Release(); g_pSwapChain = NULL; }
+		if (g_pd3dDeviceContext) { g_pd3dDeviceContext->Release(); g_pd3dDeviceContext = NULL; }
+		if (g_pd3dDevice) { g_pd3dDevice->Release(); g_pd3dDevice = NULL; }
+}
+
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
+{
+		WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, "ImPlotDX11", NULL };
+		RegisterClassEx(&wc);
+		hWnd = CreateWindow(wc.lpszClassName, "ImPlot DX11 Demo", WS_OVERLAPPEDWINDOW, 100, 100, 1280, 720, NULL, NULL, wc.hInstance, NULL);
+
+		if (!CreateDeviceD3D(hWnd)) {
+				CleanupDeviceD3D();
+				UnregisterClass(wc.lpszClassName, wc.hInstance);
+				return 1;
+		}
+
+		ShowWindow(hWnd, nCmdShow);
+		UpdateWindow(hWnd);
+
+		ImGui::CreateContext();
+		ImPlot::CreateContext();
+		ImGui_ImplWin32_Init(hWnd);
+		ImGui_ImplDX11_Init(g_pd3dDevice, g_pd3dDeviceContext);
+
+		bool done = false;
+		while (!done)
+		{
+				MSG msg;
+				while (PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE)) {
+						TranslateMessage(&msg);
+						DispatchMessage(&msg);
+						if (msg.message == WM_QUIT) done = true;
+				}
+				if (done) break;
+
+				ImGui_ImplDX11_NewFrame();
+				ImGui_ImplWin32_NewFrame();
+				ImGui::NewFrame();
+
+				ImPlot::ShowDemoWindow();
+
+				ImGui::Render();
+				const float clear_color[4] = { 0.45f, 0.55f, 0.60f, 1.00f };
+				g_pd3dDeviceContext->OMSetRenderTargets(1, &g_mainRenderTargetView, NULL);
+				g_pd3dDeviceContext->ClearRenderTargetView(g_mainRenderTargetView, clear_color);
+				ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+
+				g_pSwapChain->Present(1, 0);
+		}
+
+		ImGui_ImplDX11_Shutdown();
+		ImGui_ImplWin32_Shutdown();
+		ImPlot::DestroyContext();
+		ImGui::DestroyContext();
+
+		CleanupDeviceD3D();
+		DestroyWindow(hWnd);
+		UnregisterClass(wc.lpszClassName, wc.hInstance);
+		return 0;
+}
+
+LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+		if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
+				return true;
+		switch (msg)
+		{
+		case WM_SIZE:
+				if (g_pd3dDevice != NULL && wParam != SIZE_MINIMIZED)
+				{
+						CleanupRenderTarget();
+						g_pSwapChain->ResizeBuffers(0, (UINT)LOWORD(lParam), (UINT)HIWORD(lParam), DXGI_FORMAT_UNKNOWN, 0);
+						CreateRenderTarget();
+				}
+				return 0;
+		case WM_SYSCOMMAND:
+				if ((wParam & 0xfff0) == SC_KEYMENU) return 0;
+				break;
+		case WM_DESTROY:
+				PostQuitMessage(0);
+				return 0;
+		}
+		return DefWindowProc(hWnd, msg, wParam, lParam);
+}
+
+
+
+*/
+
+
+
+
 
