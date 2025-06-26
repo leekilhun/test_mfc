@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="mfc_lib">
+      <UniqueIdentifier>{e8984957-8168-421a-a97b-e39650c79229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mfc_lib\3dabm9">
+      <UniqueIdentifier>{9c510c5f-59de-4f06-aa91-b82da84b7379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mfc_lib\GridCtrl">
+      <UniqueIdentifier>{2e0dc9ff-23e2-4d49-b28b-3d24d25468bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{9ef9c254-da3c-460f-8b8b-0d9d6c9dae44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mfc_lib\GridCtrl\NewCellTypes">
+      <UniqueIdentifier>{abe63e8c-4407-4f1b-b086-f32a54dd2338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{04762cce-9bf1-4619-be97-ee90498045f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="view">
+      <UniqueIdentifier>{f5764687-c0b0-4b7b-ac7c-05c58cbb84b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\etc">
+      <UniqueIdentifier>{caf0c4b2-3080-4bae-9e01-055bd46e63bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppMfc.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AppMfcDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\3dabm9\3dabm.h">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\3dabm9\3dabm9.h">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\3dabm9\btnenh.h">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\3dabm9\cellsmanager.h">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\3dabm9\font.h">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\3dabm9\surfacecolor.h">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\3dabm9\textdescriptor.h">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\3dabm9\texture.h">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridCellCheck.h">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridCellCombo.h">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridCellDateTime.h">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridCellNumeric.h">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridURLCell.h">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\CellRange.h">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\GridCell.h">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\GridCellBase.h">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\GridCtrl.h">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\GridDropTarget.h">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\InPlaceEdit.h">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\GridCtrl\TitleTip.h">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="mfc_lib\3dabmManager.h">
+      <Filter>mfc_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\etc\btn.h">
+      <Filter>ui\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\etc\cbtn.h">
+      <Filter>ui\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\etc\fontStatic.h">
+      <Filter>ui\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\etc\hereRect.h">
+      <Filter>ui\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\etc\imgCn.h">
+      <Filter>ui\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\etc\jog3DBtn.h">
+      <Filter>ui\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\etc\jogButton.h">
+      <Filter>ui\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\etc\toggle_btn.h">
+      <Filter>ui\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\etc\toolTip.h">
+      <Filter>ui\etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\commonUI.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\commonUI_def.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\msgWnd.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\progressWnd.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_def.hpp">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_popAlarm.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_popErrMsg.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_popErrState.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_popGetNumber.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_popGetValue.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_popGuide.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_popInfo.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_popMsg.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppMfc.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AppMfcDlg.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\3dabm9\btnenh.cpp">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\3dabm9\cellsmanager.cpp">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\3dabm9\font.cpp">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\3dabm9\surfacecolor.cpp">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\3dabm9\textdescriptor.cpp">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\3dabm9\texture.cpp">
+      <Filter>mfc_lib\3dabm9</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridCellCheck.cpp">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridCellCombo.cpp">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridCellDateTime.cpp">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridCellNumeric.cpp">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridURLCell.cpp">
+      <Filter>mfc_lib\GridCtrl\NewCellTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\GridCell.cpp">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\GridCellBase.cpp">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\GridCtrl.cpp">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\GridDropTarget.cpp">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\InPlaceEdit.cpp">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc_lib\GridCtrl\TitleTip.cpp">
+      <Filter>mfc_lib\GridCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\etc\btn.cpp">
+      <Filter>ui\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\etc\cbtn.cpp">
+      <Filter>ui\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\etc\fontStatic.cpp">
+      <Filter>ui\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\etc\hereRect.cpp">
+      <Filter>ui\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\etc\imgCn.cpp">
+      <Filter>ui\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\etc\jog3DBtn.cpp">
+      <Filter>ui\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\etc\jogButton.cpp">
+      <Filter>ui\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\etc\toggle_btn.cpp">
+      <Filter>ui\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\etc\toolTip.cpp">
+      <Filter>ui\etc</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\commonUI.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\msgWnd.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\progressWnd.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_popAlarm.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_popErrMsg.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_popErrState.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_popGetNumber.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_popGetValue.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_popGuide.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_popInfo.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_popMsg.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AppMfc.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\AppMfc.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="Data\app_cfg.json">
+      <Filter>Data</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AppMfc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

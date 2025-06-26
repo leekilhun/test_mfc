@@ -1,0 +1,35 @@
+﻿ // keep format
+{
+  "serial_no": 3333,
+  "machine_name": "new description",
+  "equipment_code": "DENO-C-V1",
+  "common": [
+    { "PASSWORD": "1234" },
+    { "LANGUAGE_IDX": 0 } // 0 = English, 1 = Korean, 
+  ],
+  "operation": [
+    { "KEEP_LOG_DATA_DAYS": 7 }
+  ],
+
+  "serial_comm": {
+    "uart_module": [
+      { "DESC": "communication with Module" },
+      { "PORT_NAME": "COM19" },
+      { "BAUDRATE": 115200 }
+    ]
+  },
+
+  "socket_net": [
+    {
+      "net_loger": [
+        { "DESC": "loopback loger" },
+        { "IP": "127.0.0.1" },
+        { "PORT": 6000 },
+        { "MODE": "UDP_CLIENT" }
+      ]
+    }
+  ]
+
+
+}
+

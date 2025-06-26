@@ -1,0 +1,91 @@
+﻿// keep format
+{
+  "teaching_data": [
+    {
+      "data_1": [
+        { "position": -5.000000 },
+        { "velocity": 100.000000 },
+        { "name": "standby" },
+        { "descript": "안전한 대기하는 위치" }
+      ]
+    },
+    {
+      "data_2": [
+        { "position": -8.000000 },
+        { "velocity": 100.000000 },
+        { "name": "start" },
+        { "descript": "시작 위치" }
+      ]
+    },
+    {
+      "data_3": [
+        { "position": -22.000000 },
+        { "velocity": 100.000000 },
+        { "name": "move1" },
+        { "descript": "누름 작업 직전 이동 위치" }
+      ]
+    },
+    {
+      "data_4": [
+        { "position": -24.000000 },
+        { "velocity": 5.000000 },
+        { "name": "press" },
+        { "descript": "누른 상태 위치" }
+      ]
+    },
+    {
+      "data_5": [
+        { "position": -23.000000 },
+        { "velocity": 5.000000 },
+        { "name": "check" },
+        { "descript": "상태 체크 위치" }
+      ]
+    },
+    {
+      "data_6": [
+        { "position": -5.000000 },
+        { "velocity": 100.000000 },
+        { "name": "standby" },
+        { "descript": "안전한 대기하는 위치" }
+      ]
+    },
+    {
+      "data_7": [
+        { "position": -8.000000 },
+        { "velocity": 100.000000 },
+        { "name": "start" },
+        { "descript": "시작 위치" }
+      ]
+    },
+    {
+      "data_8": [
+        { "position": -22.000000 },
+        { "velocity": 100.000000 },
+        { "name": "move1" },
+        { "descript": "누름 작업 직전 이동 위치" }
+      ]
+    },
+    {
+      "data_9": [
+        { "position": -25.000000 },
+        { "velocity": 5.000000 },
+        { "name": "press" },
+        { "descript": "누른 상태 위치" }
+      ]
+    },
+    {
+      "data_10": [
+        { "position": -23.000000 },
+        { "velocity": 5.000000 },
+        { "name": "check" },
+        { "descript": "상태 체크 위치" }
+      ]
+    }
+  ],
+  "loadcell_data": [
+    { "referece_mN": 2000},
+    { "settling_ms": 2000},
+    { "checking_ms": 1000}, 
+    { "limit_mN": 2000}
+  ]
+}

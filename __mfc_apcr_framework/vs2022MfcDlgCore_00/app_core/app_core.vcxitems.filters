@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ap">
+      <UniqueIdentifier>{dc864ab9-4ade-42b0-93b3-f9eba5b9ea8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{996ae1f0-fa04-4edf-add7-5b5f4c16d75e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{1e1a2db8-21dd-4c1e-b8a4-0b021cd29d00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mcc_lib">
+      <UniqueIdentifier>{48a67f6e-d927-463e-b046-47215c0149ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{658211ab-70f2-47ef-8e58-e4a9b39a2fc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\MMC">
+      <UniqueIdentifier>{d464b688-834d-4435-805b-f529b09b4193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\MMC\MotionSDK_64bit">
+      <UniqueIdentifier>{db8ba971-33ee-4635-a66e-2e65245d823a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ap\_inc">
+      <UniqueIdentifier>{c66bbeeb-54b5-4e82-91ea-a035ab726eca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ap\_inc\hw">
+      <UniqueIdentifier>{d290066e-3fed-4d1f-89c9-c85c1f8df221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ap\_inc\interface">
+      <UniqueIdentifier>{f467a467-474f-4d25-9b10-740a2bb4a118}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ap\api">
+      <UniqueIdentifier>{b10a5d8c-7fed-488f-9172-479ba9addde0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ap\cn">
+      <UniqueIdentifier>{f637f50e-a075-4802-acb6-14b2724ca7f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ap\en">
+      <UniqueIdentifier>{506ccdb5-284c-4f84-8d58-620dee99df75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ap\src">
+      <UniqueIdentifier>{92382012-a416-4941-b4c9-560e80010607}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\hw\uart.hpp">
+      <Filter>ap\_inc\hw</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\ap_dat.hpp">
+      <Filter>ap\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\api_cmd.hpp">
+      <Filter>ap\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\xprotocol_cmd.hpp">
+      <Filter>ap\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\ap.hpp">
+      <Filter>ap</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\ap_def.hpp">
+      <Filter>ap</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\def_io.hpp">
+      <Filter>ap</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\def_obj.hpp">
+      <Filter>ap</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)lib\mmc_lib.hpp">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)lib\MMC\MotionSDK_64bit\NMC_Motion.h">
+      <Filter>lib\MMC\MotionSDK_64bit</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)mcc_lib\mcc_conversion.hpp">
+      <Filter>mcc_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)mcc_lib\mcc_types.hpp">
+      <Filter>mcc_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)mcc_lib\mcc_utils.hpp">
+      <Filter>mcc_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\downloader_peeler.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\mcc_cli.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\mcc_json.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\mcc_log.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\sequence_terminal.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\utils.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)def.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)core.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\interface\IComm.hpp">
+      <Filter>ap\_inc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\interface\IIO.hpp">
+      <Filter>ap\_inc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\interface\ILock.hpp">
+      <Filter>ap\_inc\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\hw\socket.hpp">
+      <Filter>ap\_inc\hw</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\def_sys.hpp">
+      <Filter>ap</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\def_type.hpp">
+      <Filter>ap</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\ap_reg.hpp">
+      <Filter>ap\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\ap_vlog.hpp">
+      <Filter>ap\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\ap_io.hpp">
+      <Filter>ap\_inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\ap.cpp">
+      <Filter>ap</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)lib\mmc_lib.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)util\utils.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)core.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\src\ap_dat.cpp">
+      <Filter>ap\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\src\ap_io.cpp">
+      <Filter>ap\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\src\ap_reg.cpp">
+      <Filter>ap\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\src\ap_vlog.cpp">
+      <Filter>ap\src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\api\api_cmd.cpp">
+      <Filter>ap\api</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)util\mcc_json.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)util\mcc_log.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\_inc\hw\uart.cpp">
+      <Filter>ap\_inc\hw</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\_inc\hw\socket.cpp">
+      <Filter>ap\_inc\hw</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Data\app_cfg.json">
+      <Filter>Data</Filter>
+    </None>
+  </ItemGroup>
+</Project>

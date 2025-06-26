@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "configure",
+      "type": "shell",
+      "command": "cmake -S ./ -B ./build -G 'Visual Studio 17 2022' ",
+      "problemMatcher": [],
+      "group": "build",
+      // "options": {
+      //   "cwd": "${fileDirname}"
+      // }
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "cmake --build ./build -j16",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": "cmake --build ./build --target clean",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": "${workspaceFolder}/build/Debug/${config:uv_project_name}.exe",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+  
+}

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{e7092048-506f-47a6-8ac5-ec6187645743}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\ap.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\ap_def.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\def_io.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\def_obj.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\def_sys.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\def_type.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\api_cmd.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\ap_dat.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\ap_io.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\ap_reg.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\ap_vlog.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\hw\socket.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\hw\uart.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\interface\IComm.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\interface\IIO.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\interface\ILock.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ap\_inc\xprotocol_cmd.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)core.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)def.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)lib\MMC\MotionSDK_64bit\NMC_Motion.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)lib\mmc_lib.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)mcc_lib\mcc_conversion.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)mcc_lib\mcc_types.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)mcc_lib\mcc_utils.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\downloader_peeler.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\mcc_cli.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\mcc_json.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\mcc_log.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\sequence_terminal.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)util\utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\ap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\api\api_cmd.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\src\ap_dat.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\src\ap_io.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\src\ap_reg.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\src\ap_vlog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\_inc\hw\socket.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ap\_inc\hw\uart.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)core.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lib\mmc_lib.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)util\mcc_json.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)util\mcc_log.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)util\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Data\app_cfg.json" />
+  </ItemGroup>
+</Project>

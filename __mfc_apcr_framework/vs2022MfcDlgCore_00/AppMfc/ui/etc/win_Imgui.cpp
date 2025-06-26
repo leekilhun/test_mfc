@@ -2,8 +2,11 @@
 //
 
 #include "pch.h"
-#include "use_imgui.h"
+#include "ui_def.hpp"
+
+
 #include "afxdialogex.h"
+
 #include "win_Imgui.h"
 
 
@@ -26,29 +29,47 @@ void CleanupDeviceD3D();
 void CreateRenderTarget();
 void CleanupRenderTarget();
 
-bool CreateDeviceD3D(HWND hWnd) {
+bool CreateDeviceD3D(HWND hWnd) 
+{
 	DXGI_SWAP_CHAIN_DESC sd = {};
+	sd.OutputWindow = hWnd;
+	sd.Windowed = true;
 	sd.BufferCount = 2;
+	sd.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
+	sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
+
+	sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 	sd.BufferDesc.Width = 0;
 	sd.BufferDesc.Height = 0;
 	sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-	sd.BufferDesc.RefreshRate.Numerator = 60;
+	sd.BufferDesc.RefreshRate.Numerator = 144;
 	sd.BufferDesc.RefreshRate.Denominator = 1;
-	sd.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
-	sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
-	sd.OutputWindow = hWnd;
-	sd.SampleDesc.Count = 1;
+	sd.BufferDesc.Scaling = DXGI_MODE_SCALING_UNSPECIFIED;
+	sd.BufferDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED;
+	//sd.BufferCount = 2;
+	//sd.BufferDesc.Width = 0;
+	//sd.BufferDesc.Height = 0;
+	//sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+	//sd.BufferDesc.RefreshRate.Numerator = 60;
+	//sd.BufferDesc.RefreshRate.Denominator = 1;
+	//sd.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
+	//sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+	//sd.OutputWindow = hWnd;
+	//sd.SampleDesc.Count = 1;
+	//sd.SampleDesc.Quality = 0;
+	//sd.Windowed = TRUE;
+	//sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
+	sd.SampleDesc.Count = 1; // how many multisamples
 	sd.SampleDesc.Quality = 0;
-	sd.Windowed = TRUE;
-	sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
 
-	UINT createDeviceFlags = D3D11_CREATE_DEVICE_DEBUG;
+	UINT createDeviceFlags = 0;// D3D11_CREATE_DEVICE_DEBUG;
 	D3D_FEATURE_LEVEL featureLevel;
 	const D3D_FEATURE_LEVEL featureLevelArray[2] = {
 			D3D_FEATURE_LEVEL_11_0,
 			D3D_FEATURE_LEVEL_10_0,
 	};
 
+	
 	HRESULT hr = D3D11CreateDeviceAndSwapChain(
 		nullptr,
 		D3D_DRIVER_TYPE_HARDWARE,
@@ -358,7 +379,6 @@ private:
 
 // Cwin_Imgui 대화 상자
 
-#define UPDATE_TIMER_POP_UNIT_IMGUI_DLG 2
 
 IMPLEMENT_DYNAMIC(Cwin_Imgui, CDialogEx)
 
@@ -422,7 +442,8 @@ BOOL Cwin_Imgui::OnInitDialog()
 
 	// TODO:  여기에 추가 초기화 작업을 추가합니다.
 
-	if (!CreateDeviceD3D(m_hWnd)) {
+	bool ret = CreateDeviceD3D(GetSafeHwnd()); // 다이렉트X 초기화
+	if (ret == false) {
 		MessageBox(L"DirectX 11 초기화 실패!", L"오류", MB_OK | MB_ICONERROR);
 		return FALSE;
 	}
@@ -471,10 +492,12 @@ void Cwin_Imgui::RenderImGui()
 
 
 
-#if 1
+#if 0
 	ImGui::ShowDemoWindow();
 #else
 
+
+#if 1
 	// ✅ 예제 로그 창 추가
 	static bool show_log = true;
 	ShowExampleAppLog(&show_log);
@@ -482,9 +505,10 @@ void Cwin_Imgui::RenderImGui()
 	ImGui::Begin("Main Window");
 
 	ImGui::End();
+#endif
 
 
-
+#if 0
 	// ✅ Overlay 윈도우 추가 (FPS, 디버그 정보)
 	static bool show_overlay = true;
 	if (show_overlay)
@@ -506,13 +530,15 @@ void Cwin_Imgui::RenderImGui()
 			ImGui::End();
 		}
 	}
+#endif
 
 
 	//stack을 share 후 사용하는 듯
 	if (ImGui::BeginPopup("Log Monitor", ImGuiWindowFlags_AlwaysAutoResize))
 	{
 		ImGui::Text("Logging...");
-		if (ImGui::Button("Close")) {
+		if (ImGui::Button("Close"))
+		{
 			ImGui::CloseCurrentPopup();
 		}
 		ImGui::EndPopup();
@@ -536,4 +562,3 @@ void Cwin_Imgui::CleanupImGui()
 	CleanupDeviceD3D();
 }
 
-////

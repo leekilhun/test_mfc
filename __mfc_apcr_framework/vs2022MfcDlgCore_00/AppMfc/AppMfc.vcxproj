@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{09B08736-9415-318B-DF51-C5E52CC87F8D}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>AppMfc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+    <Import Project="..\app_core\app_core.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\ui\;$(ProjectDir)\ui\etc\;$(ProjectDir)\view\;$(ProjectDir)\mfc_lib\;$(ProjectDir)\mfc_lib\GridCtrl\;$(ProjectDir)\mfc_lib\3dabm9\;$(ProjectDir)\mfc_lib\ChartDirector_60\;$(ProjectDir)\mfc_lib\ChartDirector_60\include\;$(ProjectDir)\mfc_lib\ChartDirector_60\lib64\;$(ProjectDir)\mfc_lib\imgui\;$(SolutionDir)\app_core\;$(SolutionDir)\app_core\ap\;$(SolutionDir)\app_core\ap\_inc\;$(SolutionDir)\app_core\ap\_inc\hw\;$(SolutionDir)\app_core\ap\_inc\interface\;$(SolutionDir)\app_core\lib\;$(SolutionDir)\app_core\lib\MMC\MotionSDK_64bit\;$(SolutionDir)\app_core\mcc_lib\;$(SolutionDir)\app_core\util\</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\ui\;$(ProjectDir)\ui\etc\;$(ProjectDir)\view\;$(ProjectDir)\mfc_lib\;$(ProjectDir)\mfc_lib\GridCtrl\;$(ProjectDir)\mfc_lib\3dabm9\;$(ProjectDir)\mfc_lib\ChartDirector_60\;$(ProjectDir)\mfc_lib\ChartDirector_60\include\;$(ProjectDir)\mfc_lib\ChartDirector_60\lib64\;$(ProjectDir)\mfc_lib\imgui\;$(SolutionDir)\app_core\;$(SolutionDir)\app_core\ap\;$(SolutionDir)\app_core\ap\_inc\;$(SolutionDir)\app_core\ap\_inc\hw\;$(SolutionDir)\app_core\ap\_inc\interface\;$(SolutionDir)\app_core\lib\;$(SolutionDir)\app_core\lib\MMC\MotionSDK_64bit\;$(SolutionDir)\app_core\mcc_lib\;$(SolutionDir)\app_core\util\</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AppMfc.h" />
+    <ClInclude Include="AppMfcDlg.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="mfc_lib\3dabm9\3dabm.h" />
+    <ClInclude Include="mfc_lib\3dabm9\3dabm9.h" />
+    <ClInclude Include="mfc_lib\3dabm9\btnenh.h" />
+    <ClInclude Include="mfc_lib\3dabm9\cellsmanager.h" />
+    <ClInclude Include="mfc_lib\3dabm9\font.h" />
+    <ClInclude Include="mfc_lib\3dabm9\surfacecolor.h" />
+    <ClInclude Include="mfc_lib\3dabm9\textdescriptor.h" />
+    <ClInclude Include="mfc_lib\3dabm9\texture.h" />
+    <ClInclude Include="mfc_lib\3dabmManager.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\CellRange.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\GridCell.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\GridCellBase.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\GridCtrl.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\GridDropTarget.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\InPlaceEdit.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridCellCheck.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridCellCombo.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridCellDateTime.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridCellNumeric.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\NewCellTypes\GridURLCell.h" />
+    <ClInclude Include="mfc_lib\GridCtrl\TitleTip.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ui\commonUI.h" />
+    <ClInclude Include="ui\commonUI_def.h" />
+    <ClInclude Include="ui\etc\btn.h" />
+    <ClInclude Include="ui\etc\cbtn.h" />
+    <ClInclude Include="ui\etc\fontStatic.h" />
+    <ClInclude Include="ui\etc\hereRect.h" />
+    <ClInclude Include="ui\etc\imgCn.h" />
+    <ClInclude Include="ui\etc\jog3DBtn.h" />
+    <ClInclude Include="ui\etc\jogButton.h" />
+    <ClInclude Include="ui\etc\toggle_btn.h" />
+    <ClInclude Include="ui\etc\toolTip.h" />
+    <ClInclude Include="ui\msgWnd.h" />
+    <ClInclude Include="ui\progressWnd.h" />
+    <ClInclude Include="ui\ui_def.hpp" />
+    <ClInclude Include="ui\ui_popAlarm.h" />
+    <ClInclude Include="ui\ui_popErrMsg.h" />
+    <ClInclude Include="ui\ui_popErrState.h" />
+    <ClInclude Include="ui\ui_popGetNumber.h" />
+    <ClInclude Include="ui\ui_popGetValue.h" />
+    <ClInclude Include="ui\ui_popGuide.h" />
+    <ClInclude Include="ui\ui_popInfo.h" />
+    <ClInclude Include="ui\ui_popMsg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppMfc.cpp" />
+    <ClCompile Include="AppMfcDlg.cpp" />
+    <ClCompile Include="mfc_lib\3dabm9\btnenh.cpp" />
+    <ClCompile Include="mfc_lib\3dabm9\cellsmanager.cpp" />
+    <ClCompile Include="mfc_lib\3dabm9\font.cpp" />
+    <ClCompile Include="mfc_lib\3dabm9\surfacecolor.cpp" />
+    <ClCompile Include="mfc_lib\3dabm9\textdescriptor.cpp" />
+    <ClCompile Include="mfc_lib\3dabm9\texture.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\GridCell.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\GridCellBase.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\GridCtrl.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\GridDropTarget.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\InPlaceEdit.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridCellCheck.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridCellCombo.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridCellDateTime.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridCellNumeric.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\NewCellTypes\GridURLCell.cpp" />
+    <ClCompile Include="mfc_lib\GridCtrl\TitleTip.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ui\commonUI.cpp" />
+    <ClCompile Include="ui\etc\btn.cpp" />
+    <ClCompile Include="ui\etc\cbtn.cpp" />
+    <ClCompile Include="ui\etc\fontStatic.cpp" />
+    <ClCompile Include="ui\etc\hereRect.cpp" />
+    <ClCompile Include="ui\etc\imgCn.cpp" />
+    <ClCompile Include="ui\etc\jog3DBtn.cpp" />
+    <ClCompile Include="ui\etc\jogButton.cpp" />
+    <ClCompile Include="ui\etc\toggle_btn.cpp" />
+    <ClCompile Include="ui\etc\toolTip.cpp" />
+    <ClCompile Include="ui\msgWnd.cpp" />
+    <ClCompile Include="ui\progressWnd.cpp" />
+    <ClCompile Include="ui\ui_popAlarm.cpp" />
+    <ClCompile Include="ui\ui_popErrMsg.cpp" />
+    <ClCompile Include="ui\ui_popErrState.cpp" />
+    <ClCompile Include="ui\ui_popGetNumber.cpp" />
+    <ClCompile Include="ui\ui_popGetValue.cpp" />
+    <ClCompile Include="ui\ui_popGuide.cpp" />
+    <ClCompile Include="ui\ui_popInfo.cpp" />
+    <ClCompile Include="ui\ui_popMsg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AppMfc.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\app_cfg.json" />
+    <None Include="res\AppMfc.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AppMfc.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
